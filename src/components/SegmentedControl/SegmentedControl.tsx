@@ -53,6 +53,11 @@ export type SegmentedControlProps<T extends string> = {
    * @default false
    */
   "pill"?: boolean
+  /**
+   * Controls the visual style of the segmented control.
+   * @default default
+   */
+  "variant"?: "default" | "hosting"
   "className"?: string
   "children": React.ReactNode
 }
@@ -65,6 +70,7 @@ export const SegmentedControl = <T extends string>({
   pill = true,
   size = "md",
   gutterSize,
+  variant = "default",
   className,
   onClick,
   ...restProps
@@ -174,6 +180,7 @@ export const SegmentedControl = <T extends string>({
       data-pill={pill ? "" : undefined}
       data-size={size}
       data-gutter-size={gutterSize}
+      data-variant={variant}
       {...restProps}
     >
       <div className={s.SegmentedControlThumb} ref={thumbRef} />

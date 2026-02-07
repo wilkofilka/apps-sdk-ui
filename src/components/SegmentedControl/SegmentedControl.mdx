@@ -18,8 +18,9 @@ export const Example = () => {
         <SegmentedControl
             value={theme}
             onChange={(nextTheme) => setTheme(nextTheme)}
-            aria-label="Seleect theme mode"
+            aria-label="Select theme mode"
             gutterSize='sm'
+            variant="hosting"
         >
             <SegmentedControl.Option value="light" aria-label="Light mode">
                 <LightMode />
@@ -104,3 +105,8 @@ Use `disabled` on a given `SegmentedControl.Option` to disable only that option.
 To create a scrollable segmented control, wrap the component in a simple `flex` wrapper, which will then cause the control to create inner scrolling when applicable. When scrollable, the selected option will automatically be scrolled into view.
 
 <Canvas of={SegmentedControlStories.Scrollable} />
+
+### Hosting overlay variant
+Use the `variant="hosting"` prop to apply the overlay-inspired styling used for bottom navigation overlays.
+
+<Canvas of={SegmentedControlStories.HostingOverlay} />

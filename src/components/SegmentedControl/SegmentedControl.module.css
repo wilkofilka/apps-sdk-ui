@@ -137,6 +137,18 @@
     --segmented-control-radius: var(--radius-full);
     --segmented-control-option-radius: var(--radius-full);
   }
+
+  &:where([data-variant="hosting"]) {
+    --segmented-control-background: alpha(var(--purple-900), 70%);
+    --segmented-control-thumb-background: alpha(var(--purple-400), 35%);
+    --segmented-control-thumb-shadow: 0 10px 24px -12px alpha(var(--purple-950), 80%);
+    --segmented-control-option-highlight-background-color: alpha(var(--purple-400), 18%);
+
+    border: 1px solid alpha(var(--purple-300), 25%);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 10px 30px -18px alpha(var(--purple-950), 80%);
+    color: var(--purple-100);
+  }
 }
 
 .SegmentedControlOption {
@@ -160,6 +172,22 @@
 
   :where(.SegmentedControl[data-pill]) & {
     padding: 0 calc(var(--segmented-control-option-gutter) * var(--control-gutter-pill-scaling));
+  }
+
+  :where(.SegmentedControl[data-variant="hosting"]) & {
+    color: var(--purple-200);
+
+    &[data-state="on"] {
+      color: var(--purple-25);
+    }
+
+    @mixin hover {
+      color: var(--purple-50);
+
+      &::before {
+        opacity: 0.4;
+      }
+    }
   }
 
   &[data-state="on"]:focus-visible {
