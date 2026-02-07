@@ -1,5 +1,6 @@
 import type { Meta } from "@storybook/react"
 import { useState } from "react"
+import { Chats, Explore, Settings, Tools } from "../Icon"
 import { SegmentedControl, type SegmentedControlProps, type SizeVariant } from "./"
 
 const meta = {
@@ -144,6 +145,62 @@ export const Scrollable = ({ size }: { size: SizeVariant }) => {
       </div>
     </div>
   )
+}
+
+export const HostingOverlay = () => {
+  const [view, setView] = useState("chats")
+
+  return (
+    <div className="flex w-full justify-center bg-[radial-gradient(circle_at_center,_var(--purple-900)_0%,_var(--purple-950)_60%)] p-8">
+      <SegmentedControl
+        value={view}
+        onChange={(nextView) => setView(nextView)}
+        aria-label="Hosting overlay navigation"
+        variant="hosting"
+        size="lg"
+        block
+        className="w-full max-w-[360px]"
+      >
+        <SegmentedControl.Option value="chats">
+          <div className="flex flex-col items-center gap-1 text-[11px] leading-none">
+            <Chats className="size-4" />
+            Chats
+          </div>
+        </SegmentedControl.Option>
+        <SegmentedControl.Option value="explore">
+          <div className="flex flex-col items-center gap-1 text-[11px] leading-none">
+            <Explore className="size-4" />
+            Explore
+          </div>
+        </SegmentedControl.Option>
+        <SegmentedControl.Option value="tools">
+          <div className="flex flex-col items-center gap-1 text-[11px] leading-none">
+            <Tools className="size-4" />
+            Tools
+          </div>
+        </SegmentedControl.Option>
+        <SegmentedControl.Option value="settings">
+          <div className="flex flex-col items-center gap-1 text-[11px] leading-none">
+            <Settings className="size-4" />
+            Settings
+          </div>
+        </SegmentedControl.Option>
+      </SegmentedControl>
+    </div>
+  )
+}
+
+HostingOverlay.parameters = {
+  docs: {
+    source: {
+      code: `<SegmentedControl variant="hosting" size="lg" block>
+  <SegmentedControl.Option value="chats">Chats</SegmentedControl.Option>
+  <SegmentedControl.Option value="explore">Explore</SegmentedControl.Option>
+  <SegmentedControl.Option value="tools">Tools</SegmentedControl.Option>
+  <SegmentedControl.Option value="settings">Settings</SegmentedControl.Option>
+</SegmentedControl>`,
+    },
+  },
 }
 
 Scrollable.parameters = {
