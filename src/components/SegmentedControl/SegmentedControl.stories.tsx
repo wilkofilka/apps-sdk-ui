@@ -27,6 +27,10 @@ export const Base = (args: SegmentedControlProps<string>) => {
   )
 }
 
+Base.args = {
+  variant: "hosting",
+}
+
 export const Sizing = (args: SegmentedControlProps<string>) => <Base {...args} />
 
 Sizing.args = {
