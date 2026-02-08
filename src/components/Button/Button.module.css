@@ -13,6 +13,7 @@
   transition-duration: var(--transition-duration-basic);
   transition-property: opacity, color;
   transition-timing-function: var(--transition-ease-basic);
+  --button-shadow: none;
   user-select: none;
   white-space: nowrap;
 
@@ -26,6 +27,7 @@
     transition-duration: var(--transition-duration-basic);
     transition-property: opacity, background-color, transform, box-shadow, border-color;
     transition-timing-function: var(--transition-ease-basic);
+    box-shadow: var(--button-shadow);
     /* Composite layer seems required in some cases to avoid visual artifacts. */
     will-change: transform;
   }
@@ -440,6 +442,8 @@
       --button-background-color-active: var(--color-background-primary-solid-active);
       --button-text-color: var(--color-text-primary-solid);
       --button-ring-color: var(--color-ring-primary-solid);
+      --button-shadow: 0 10px 24px -12px rgb(159 92 255 / 75%),
+        0 0 0 1px rgb(255 255 255 / 12%) inset;
     }
 
     &:where([data-color="secondary"]) {
@@ -542,6 +546,7 @@
       --button-background-color-active: var(--color-background-primary-soft-alpha-active);
       --button-text-color: var(--color-text-primary-soft);
       --button-ring-color: var(--color-ring-primary-soft);
+      --button-shadow: 0 8px 20px -14px rgb(159 92 255 / 55%);
     }
 
     &:where([data-color="secondary"]) {

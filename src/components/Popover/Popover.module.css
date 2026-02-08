@@ -15,6 +15,10 @@
   transform-origin: var(--radix-popover-content-transform-origin);
   will-change: transform;
 
+  @mixin dark {
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+
   &:focus {
     outline: none;
   }

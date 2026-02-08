@@ -1,4 +1,4 @@
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises"
+import { cp, mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 
@@ -12,6 +12,8 @@ const __dirname = path.dirname(__filename)
 const PROJECT_ROOT = path.resolve(__dirname, "..")
 const SRC_DIR = path.join(PROJECT_ROOT, "src")
 const OUT_DIR = path.join(PROJECT_ROOT, "dist/es")
+const BACKGROUNDS_DIR = path.join(SRC_DIR, "styles", "backgrounds")
+const OUT_BACKGROUNDS_DIR = path.join(OUT_DIR, "styles", "backgrounds")
 
 /**
  * Recursively collect every `.css` file within the provided directory.
@@ -78,6 +80,16 @@ async function buildCss() {
   console.log(
     `[build-css] Processed ${cssFiles.length} CSS file${cssFiles.length === 1 ? "" : "s"}.`,
   )
+
+  try {
+    await stat(BACKGROUNDS_DIR)
+    await mkdir(OUT_BACKGROUNDS_DIR, { recursive: true })
+    await cp(BACKGROUNDS_DIR, OUT_BACKGROUNDS_DIR, { recursive: true })
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      throw error
+    }
+  }
 }
 
 buildCss().catch((error) => {

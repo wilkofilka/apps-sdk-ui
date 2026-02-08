@@ -53,14 +53,14 @@
       Text colors
     ============================================= */
     --color-text: var(--gray-1000);
-    --color-text-secondary: light-dark(var(--gray-500), var(--gray-700));
-    --color-text-tertiary: light-dark(var(--gray-400), var(--gray-600));
+    --color-text-secondary: light-dark(var(--gray-500), #c8b7e9);
+    --color-text-tertiary: light-dark(var(--gray-400), #a896c6);
     --color-text-inverse: var(--gray-0);
 
     /* =============================================
       Ring colors
     ============================================= */
-    --color-ring: light-dark(var(--blue-500), var(--blue-400));
+    --color-ring: light-dark(var(--blue-500), var(--purple-400));
 
     /* =============================================
       Primary colors
@@ -68,35 +68,35 @@
     /* Text */
     --color-text-primary: var(--color-text);
     /* Soft */
-    --color-background-primary-soft: light-dark(var(--gray-100), var(--gray-300));
-    --color-background-primary-soft-hover: light-dark(var(--gray-150), var(--gray-350));
-    --color-background-primary-soft-active: light-dark(var(--gray-200), var(--gray-400));
-    --color-background-primary-soft-alpha: light-dark(var(--alpha-08), var(--alpha-12));
-    --color-background-primary-soft-alpha-hover: light-dark(var(--alpha-12), var(--alpha-16));
-    --color-background-primary-soft-alpha-active: light-dark(var(--alpha-16), var(--alpha-20));
+    --color-background-primary-soft: light-dark(var(--gray-100), alpha(var(--purple-400), 20%));
+    --color-background-primary-soft-hover: light-dark(var(--gray-150), alpha(var(--purple-400), 26%));
+    --color-background-primary-soft-active: light-dark(var(--gray-200), alpha(var(--purple-400), 32%));
+    --color-background-primary-soft-alpha: light-dark(var(--alpha-08), alpha(var(--purple-400), 18%));
+    --color-background-primary-soft-alpha-hover: light-dark(var(--alpha-12), alpha(var(--purple-400), 24%));
+    --color-background-primary-soft-alpha-active: light-dark(var(--alpha-16), alpha(var(--purple-400), 30%));
     --color-text-primary-soft: var(--color-text);
-    --color-background-primary-soft-alt: var(--alpha-02);
-    --color-border-primary-soft-alt: var(--alpha-06);
+    --color-background-primary-soft-alt: light-dark(var(--alpha-02), alpha(var(--purple-400), 14%));
+    --color-border-primary-soft-alt: light-dark(var(--alpha-06), alpha(var(--purple-400), 24%));
     --color-text-primary-soft-alt: var(--color-text);
     /* Surface */
-    --color-background-primary-surface: light-dark(var(--alpha-05), var(--alpha-08));
-    --color-border-primary-surface: light-dark(var(--alpha-05), var(--alpha-08));
+    --color-background-primary-surface: light-dark(var(--alpha-05), alpha(var(--purple-400), 12%));
+    --color-border-primary-surface: light-dark(var(--alpha-05), alpha(var(--purple-400), 18%));
     --color-text-primary-surface: var(--color-text);
     /* Solid */
-    --color-background-primary-solid: light-dark(var(--gray-900), var(--gray-950));
-    --color-background-primary-solid-hover: light-dark(var(--gray-700), var(--gray-900));
-    --color-background-primary-solid-active: light-dark(var(--gray-600), var(--gray-850));
+    --color-background-primary-solid: light-dark(var(--gray-900), var(--purple-400));
+    --color-background-primary-solid-hover: light-dark(var(--gray-700), var(--purple-300));
+    --color-background-primary-solid-active: light-dark(var(--gray-600), var(--purple-500));
     --color-text-primary-solid: var(--color-text-inverse);
     /* Outline */
-    --color-background-primary-outline-hover: light-dark(var(--alpha-02), var(--alpha-04));
-    --color-background-primary-outline-active: light-dark(var(--alpha-04), var(--alpha-06));
-    --color-border-primary-outline: light-dark(var(--alpha-16), var(--alpha-25));
-    --color-border-primary-outline-hover: light-dark(var(--alpha-20), var(--alpha-30));
+    --color-background-primary-outline-hover: light-dark(var(--alpha-02), alpha(var(--purple-400), 10%));
+    --color-background-primary-outline-active: light-dark(var(--alpha-04), alpha(var(--purple-400), 16%));
+    --color-border-primary-outline: light-dark(var(--alpha-16), alpha(var(--purple-400), 32%));
+    --color-border-primary-outline-hover: light-dark(var(--alpha-20), alpha(var(--purple-400), 45%));
     --color-text-primary-outline: var(--color-text);
     --color-text-primary-outline-hover: var(--color-text);
     /* Ghost */
-    --color-background-primary-ghost-hover: light-dark(var(--alpha-08), var(--alpha-12));
-    --color-background-primary-ghost-active: light-dark(var(--alpha-12), var(--alpha-16));
+    --color-background-primary-ghost-hover: light-dark(var(--alpha-08), alpha(var(--purple-400), 20%));
+    --color-background-primary-ghost-active: light-dark(var(--alpha-12), alpha(var(--purple-400), 28%));
     --color-text-primary-ghost: var(--color-text);
     --color-text-primary-ghost-hover: var(--color-text);
     /* Ring */
@@ -402,9 +402,9 @@
     /* =============================================
       Border colors
     ============================================= */
-    --color-border-subtle: light-dark(var(--alpha-05), var(--alpha-06));
-    --color-border: light-dark(var(--alpha-10), var(--alpha-12));
-    --color-border-strong: light-dark(var(--alpha-15), var(--alpha-20));
+    --color-border-subtle: light-dark(var(--alpha-05), alpha(var(--purple-400), 14%));
+    --color-border: light-dark(var(--alpha-10), alpha(var(--purple-400), 22%));
+    --color-border-strong: light-dark(var(--alpha-15), alpha(var(--purple-400), 34%));
 
     /* =============================================
       Typography
@@ -521,13 +521,13 @@
     /* =============================================
       Scrollbar
     ============================================= */
-    --scrollbar-color: var(--alpha-30);
+    --scrollbar-color: light-dark(var(--alpha-30), alpha(var(--purple-400), 45%));
 
     /* =============================================
       Shadows
     ============================================= */
-    --shadow: 0 10px 15px -3px light-dark(rgba(0 0 0 / 10%), rgba(0 0 0 / 20%)),
-      0 4px 6px -4px light-dark(rgba(0 0 0 / 10%), rgba(0 0 0 / 20%));
+    --shadow: 0 18px 40px -18px light-dark(rgba(0 0 0 / 10%), rgba(128 70 255 / 55%)),
+      0 8px 20px -12px light-dark(rgba(0 0 0 / 10%), rgba(0 0 0 / 60%));
     --shadow-hairline: 0 0 0 var(--shadow-hairline-width) var(--shadow-hairline-color);
     /* 100 */
     --shadow-100: var(--elevation-100-geo) rgb(var(--shadow-color) / var(--shadow-alpha-100));
@@ -557,10 +557,10 @@
     /* =============================================
       Surfaces
     ============================================= */
-    --color-surface: light-dark(var(--gray-0), var(--gray-200));
-    --color-surface-secondary: light-dark(var(--gray-50), var(--gray-100));
-    --color-surface-tertiary: light-dark(var(--gray-75), var(--gray-50));
-    --color-surface-elevated: light-dark(var(--gray-0), var(--gray-300));
-    --color-surface-elevated-secondary: light-dark(var(--gray-50), var(--gray-400));
+    --color-surface: light-dark(var(--gray-0), #0b0716);
+    --color-surface-secondary: light-dark(var(--gray-50), #120a22);
+    --color-surface-tertiary: light-dark(var(--gray-75), #1a0f30);
+    --color-surface-elevated: light-dark(var(--gray-0), rgb(34 20 58 / 75%));
+    --color-surface-elevated-secondary: light-dark(var(--gray-50), rgb(24 14 46 / 75%));
   }
 }

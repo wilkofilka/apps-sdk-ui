@@ -270,11 +270,11 @@
     --shadow-alpha-300: 0.36;
     --shadow-alpha-400: 0.3;
     --shadow-hairline-width: 1px;
-    --shadow-hairline-color: rgb(255 255 255 / 10%);
+    --shadow-hairline-color: rgb(177 120 255 / 22%);
 
     @media (resolution >= 150dpi), (resolution >= 1.5dppx) {
       --shadow-hairline-width: 0.5px;
-      --shadow-hairline-color: rgb(255 255 255 / 12%);
+      --shadow-hairline-color: rgb(177 120 255 / 26%);
     }
 
     [data-surface="elevated"] {

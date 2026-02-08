@@ -24,6 +24,10 @@
   transform-origin: var(--radix-dropdown-menu-content-transform-origin);
   will-change: transform;
 
+  @mixin dark {
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+
   /* Animation states applied to a wrapping parent */
   .Menu[data-entering] & {
     opacity: 0;

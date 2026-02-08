@@ -11,6 +11,10 @@
   /* transform-origin: var(--radix-tooltip-content-transform-origin); */
   /* transition: background-color 0.15s ease; */
 
+  @mixin dark {
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+
   /* &[data-state="closed"] {
     animation: scale-out 0.2s var(--cubic-exit);
   } */

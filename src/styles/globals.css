@@ -3,9 +3,24 @@
 ============================================= */
 @layer base {
   html,
+  body,
   :host {
     /* Apply default color */
     color: var(--color-text);
+    /* Apply default background */
+    background-color: var(--color-surface);
+    background-image:
+      linear-gradient(180deg, rgb(7 4 16 / 55%) 0%, rgb(7 4 16 / 75%) 100%),
+      url("./backgrounds/mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @mixin breakpoint md {
+      background-image:
+        linear-gradient(180deg, rgb(7 4 16 / 55%) 0%, rgb(7 4 16 / 75%) 100%),
+        url("./backgrounds/desktop.png");
+    }
     /* Smooth font rendering by default */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
